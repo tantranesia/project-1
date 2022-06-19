@@ -1,0 +1,12 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <title>latest-posts-white</title>
+  <path class="cls-1" d="M30,60h0A30,30,0,1,1,60,30h0A30,30,0,0,1,30,60ZM41.9,35.6l-8.3-7.5L31.9,11.7h0a1.9,1.9,0,0,0-3.8,0c0,.2-1.8,18.1-1.9,18.3h0A3,3,0,0,0,28,33l11.9,5.6h0a1.8,1.8,0,0,0,2.4-.9,1.8,1.8,0,0,0-.4-2.1Z"/>
+</svg>
