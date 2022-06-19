@@ -13,10 +13,12 @@ function Dashboard() {
     <div className="bg-xylo-black py-2">
       <Header />
       <div className="h-1 bg-color-border" />
-      <Navbar />
+      <div className="phone:invisible">
+        <Navbar />
+      </div>
       <Body />
       <div className="h-1 bg-color-border" />
-      <div className="invisible">
+      <div className="phone:invisible">
         <Logos />
       </div>
       <div className="h-1 bg-color-border" />

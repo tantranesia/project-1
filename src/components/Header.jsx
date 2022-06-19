@@ -4,13 +4,39 @@ import logo from '../style/image/logo.svg';
 import fire from '../style/image/fire.svg';
 import time from '../style/image/time.svg';
 import file from '../style/image/file.svg';
-import { Search } from 'react-feather';
+import { Search, Menu, X } from 'react-feather';
 
 function Header() {
   const [show, setShow] = useState(false);
+  const [open, setOpen] = useState(false);
 
   return (
-    <div className="flex flex-row justify-between items-center px-6 py-3">
+    <div className="flex flex-row justify-between items-center px-6 py-3 relative">
+      <button className="desktop:invisible tablet:invisible laptop:invisible">
+        {!open ? (
+          <Menu
+            className="text-white desktop:invisible tablet:invisible laptop:invisible"
+            onClick={() => setOpen(true)}
+          />
+        ) : (
+          <X
+            className="text-white phone:absolute phone:left-3 z-10 desktop:invisible tablet:invisible laptop:invisible"
+            onClick={() => setOpen(false)}
+          />
+        )}
+      </button>
+      {open && (
+        <div className="flex flex-col gap-5 items center phone:w-full text-center text-white bg-xylo-black phone:absolute phone:top-10 p-6 ">
+          <p className="hover:text-xylo-yellow">Podcast</p>
+          <p className="hover:text-xylo-yellow">Newsletter</p>
+          <p className="hover:text-xylo-yellow">Topics & Tags</p>
+          <p className="hover:text-xylo-yellow">About</p>
+          <p className="hover:text-xylo-yellow">Newsroom</p>
+          <p className="hover:text-xylo-yellow">Contact</p>
+          <button>Subscribe</button>
+        </div>
+      )}
+
       <div
         className="py-2 px-3 border border-xylo-border/30 rounded-lg phone:absolute phone:right-2"
         onClick={() => setShow(true)}
@@ -22,6 +48,7 @@ function Header() {
       <button className="text-white px-4 py-2 rounded  border border-xylo-border/30 phone:invisible">
         Subscribe
       </button>
+
       <Modal
         show={show}
         onClose={() => setShow(false)}

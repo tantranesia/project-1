@@ -33,7 +33,7 @@ function Body() {
           </button>
         </div>
       </div>
-      <div className="w-2/4 m-10">
+      <div className="w-2/4 m-10 phone:w-[90%]">
         <img src={hero_banner} alt="hero_banner" />
       </div>
     </div>
