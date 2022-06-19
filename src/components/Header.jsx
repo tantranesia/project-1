@@ -48,8 +48,8 @@ function Header() {
             borderRadius: '6px',
           }}
         >
-          <div className="flex flex-col gap-3">
-            <div className="py-2 px-3 border bg-xylo-solidBlack border-xylo-border/30 rounded-xl phone:absolute phone:right-2 flex flex-row items-center gap-2">
+          <div className="flex flex-col gap-3 relative">
+            <div className="py-2 px-3 border bg-xylo-solidBlack border-xylo-border/30 rounded-xl flex flex-row items-center gap-2">
               <Search className="text-white phone:w-4" />
               <input
                 placeholder="Search..."
