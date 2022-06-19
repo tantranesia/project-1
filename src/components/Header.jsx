@@ -12,7 +12,7 @@ function Header() {
 
   return (
     <div className="flex flex-row justify-between items-center px-6 py-3 relative">
-      <button className="desktop:invisible tablet:invisible laptop:invisible">
+      <button className="desktop:invisible tablet:invisible laptop:invisible desktopxl:invisible">
         {!open ? (
           <Menu
             className="text-white desktop:invisible tablet:invisible laptop:invisible"
@@ -26,24 +26,24 @@ function Header() {
         )}
       </button>
       {open && (
-        <div className="flex flex-col gap-5 items center phone:w-full text-center text-white bg-xylo-black phone:absolute phone:top-10 p-6 ">
+        <div className="flex flex-col gap-5 items-center justify-center phone:w-full text-center text-white bg-xylo-black phone:absolute phone:top-10 p-6 ">
           <p className="hover:text-xylo-yellow">Podcast</p>
           <p className="hover:text-xylo-yellow">Newsletter</p>
           <p className="hover:text-xylo-yellow">Topics & Tags</p>
           <p className="hover:text-xylo-yellow">About</p>
           <p className="hover:text-xylo-yellow">Newsroom</p>
           <p className="hover:text-xylo-yellow">Contact</p>
-          <button>Subscribe</button>
+          <button className='border border-xylo-border rounded-lg w-[80%] flex justify-center py-2 items-center hover:bg-xylo-solidBlack'>Subscribe</button>
         </div>
       )}
 
       <div
-        className="py-2 px-3 border border-xylo-border/30 rounded-lg phone:absolute phone:right-2"
+        className="py-2 px-3 border border-xylo-border/30 rounded-lg phone:absolute phone:right-2 desktop:left-2 desktopxl:left-6 desktopxl:absolute desktop:absolute"
         onClick={() => setShow(true)}
       >
         <Search className="text-white phone:w-4" />
       </div>
-      <img src={logo} alt="logo" style={{ fill: 'white', width: '162px' }} />
+      <img src={logo} alt="logo" style={{ fill: 'white', width: '162px', justifyContent: 'center' }} />
 
       <button className="text-white px-4 py-2 rounded  border border-xylo-border/30 phone:invisible">
         Subscribe
